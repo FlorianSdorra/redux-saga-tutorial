@@ -29,6 +29,7 @@ class ConnectedForm extends Component {
         this.setState({title: ""});
     }
     render(){
+        console.log(this.props)
         const {title}= this.state;
         return(
             <form onSubmit={this.handleSubmit}>
@@ -47,6 +48,6 @@ class ConnectedForm extends Component {
     }
 }
 
-const Form = connect(null, mapDispatchToProps)(ConnectedForm);
+const Form = connect(null,mapDispatchToProps)(ConnectedForm);
 
 export default Form;
