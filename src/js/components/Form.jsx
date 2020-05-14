@@ -20,6 +20,7 @@ class ConnectedForm extends Component {
 
     handleChange(event){
         this.setState({[event.target.id]:event.target.value});
+        console.log(this.state)
     }
 
     handleSubmit(event){
@@ -27,9 +28,10 @@ class ConnectedForm extends Component {
         const {title} = this.state;
         this.props.addArticle({title});
         this.setState({title: ""});
+        console.log(this.props);
+        console.log(this.state)
     }
     render(){
-        console.log(this.props)
         const {title}= this.state;
         return(
             <form onSubmit={this.handleSubmit}>

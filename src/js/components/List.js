@@ -5,6 +5,7 @@ const mapStateToProps = state => {
     return {articles: state.articles};
 };
 
+
 const ConnectedList = ({articles})=> (
     <ul>
         {articles.map(el=>(
